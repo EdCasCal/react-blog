@@ -17,7 +17,7 @@ header {
 	justify-content: space-between;
 	align-items: flex-end;
 	height: 3.5rem;
-	border-bottom: solid 1px grey;
+	border-bottom: solid 2px #130000;
 	padding: 1rem 2rem;
 }
 
@@ -53,8 +53,7 @@ textarea::-moz-placeholder {
 	text-transform: uppercase;
 }
 
-
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
 	header {
 		padding: 0.5rem;
 	}

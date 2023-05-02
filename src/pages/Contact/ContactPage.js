@@ -9,6 +9,7 @@ function ContactPage() {
 		<section className={styles.contactContainer}>
 			<h1>Contact Us</h1>
 			<p className={styles.contactSubheader}>Feel free to reach out to us with any questions or feedback!</p>
+
 			<form className={styles.formContent}>
 				<label className={styles.formLabel}>
 					Name
@@ -23,7 +24,7 @@ function ContactPage() {
 					<TextArea name="message" placeholder={"message text"} className={styles.formInput} />
 				</label>
 
-				<Button type="submit">Submit</Button>
+				<Button type="submit" text={"Submit"} className={styles.formSubmit}></Button>
 			</form>
 		</section>
 	);

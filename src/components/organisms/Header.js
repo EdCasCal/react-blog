@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBar from "../molecules/MainMenu";
+import MainMenu from "../molecules/MainMenu";
 import SearchBar from "../molecules/SearchBar";
 
 const posts = [
@@ -10,7 +10,7 @@ const posts = [
 const Header = () => {
 	return (
 		<header>
-			<NavigationBar />
+			<MainMenu />
 			<SearchBar posts={posts} onSelect={() => {}} />
 		</header>
 	);

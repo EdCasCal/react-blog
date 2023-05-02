@@ -10,7 +10,7 @@
 	aspect-ratio: 4/3;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
 	.gallery {
 		grid-template-columns: repeat(2, 1fr);
 	}
