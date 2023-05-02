@@ -1,16 +1,11 @@
 import React from "react";
-
-const about = {
-	title: "About",
-	information:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mauris vel sapien blandit, vel bibendum velit bibendum. Donec euismod velit ut enim tincidunt, sed aliquam nisl bibendum. Sed vitae nunc ultrices, malesuada magna quis, lacinia sapien. Nulla facilisi. Sed vestibulum euismod risus, vel malesuada nulla tincidunt vel. Sed vestibulum ante eget quam consequat, ac bibendum elit aliquet.",
-};
+import styles from "./AboutPage.module.css";
 
 const AboutPage = () => {
 	return (
-		<div>
-			<h1>{about.title}</h1>
-			<p>
+		<section className={styles.aboutContainer}>
+			<h1>About</h1>
+			<p className={styles.aboutInformation}>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lectus quam, consequat ac volutpat sed,
 				dignissim vitae dui. Duis maximus est nec neque luctus bibendum. Nunc in lacinia tortor. Morbi auctor quis velit
 				nec vestibulum. Cras mollis tellus id risus hendrerit, in iaculis orci faucibus. Praesent aliquam lectus ac
@@ -19,7 +14,8 @@ const AboutPage = () => {
 				id bibendum nisl. Vivamus eleifend dignissim mi. Morbi eu velit nec est pretium faucibus. Vestibulum pretium
 				metus eu justo rutrum feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat ipsum
 				elit, in faucibus nisi egestas vel.
-				<hr />
+			</p>
+			<p className={styles.aboutInformation}>
 				Pellentesque posuere at nibh sed porta. Pellentesque eget leo rhoncus, porttitor velit at, feugiat lorem.
 				Quisque rutrum sagittis pellentesque. Sed sit amet massa at arcu semper euismod quis non neque. Nunc tristique,
 				velit vitae auctor porttitor, ipsum sapien egestas mauris, nec feugiat orci velit a est. In mattis volutpat
@@ -29,12 +25,14 @@ const AboutPage = () => {
 				lacinia justo, ac sagittis orci elit in nunc. Sed faucibus ligula vel lectus lacinia, quis porttitor tortor
 				vehicula. Proin dui velit, euismod eu mi in, faucibus lacinia urna. Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit. Nullam nec ex lacinia, gravida odio in, mollis ligula. Nunc eget lacinia orci.
-				<hr />
+			</p>
+			<p className={styles.aboutInformation}>
 				Donec eget efficitur sem. Duis eleifend, ipsum eu rutrum pretium, ipsum ex tincidunt odio, fermentum fringilla
 				dolor orci in dolor. Integer quis consectetur felis. Praesent auctor pulvinar felis ac rutrum. Nullam
 				pellentesque eros sed quam ornare convallis. Pellentesque velit est, posuere et malesuada eget, vestibulum nec
 				justo. Sed aliquet mi in dolor mollis rutrum. Morbi sit amet purus dictum, lobortis lectus a, ullamcorper eros.
-				<hr />
+			</p>
+			<p className={styles.aboutInformation}>
 				Morbi dolor nunc, egestas eget risus sed, hendrerit convallis justo. Pellentesque posuere sapien eget feugiat
 				porta. Nullam a pulvinar enim, eu mattis ligula. Aenean id bibendum ante. Suspendisse sagittis ipsum vitae sem
 				vulputate euismod. Aliquam lacinia sapien at arcu aliquam, sed pulvinar nulla consectetur. Nam posuere pulvinar
@@ -42,7 +40,8 @@ const AboutPage = () => {
 				nulla ultricies. Nam gravida libero luctus, hendrerit massa vitae, pellentesque ipsum. Donec pulvinar urna in
 				dui rutrum, vitae pellentesque risus bibendum. Duis fringilla neque a enim luctus viverra. Vivamus sollicitudin
 				tortor vitae massa tempus, non hendrerit felis porta. Praesent nec egestas nisi.
-				<hr />
+			</p>
+			<p className={styles.aboutInformation}>
 				Sed ultrices lectus ac mauris malesuada, id dignissim velit congue. Cras varius augue vel ipsum dapibus molestie
 				sed nec magna. Nulla id auctor libero, dapibus suscipit elit. Sed suscipit tellus quis dignissim lacinia. In
 				scelerisque cursus nulla in vulputate. Aenean quis egestas nibh. Phasellus ut libero fermentum, facilisis odio
@@ -51,7 +50,7 @@ const AboutPage = () => {
 				scelerisque tortor id cursus hendrerit. Nullam ullamcorper facilisis magna quis interdum. Aenean ac diam at
 				risus faucibus accumsan.
 			</p>
-		</div>
+		</section>
 	);
 };
 

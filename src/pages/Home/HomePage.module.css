@@ -1,0 +1,53 @@
+.homePageContiner {
+	display: grid;
+	font-size: 1.5rem;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	max-width: 40rem;
+	gap: 2rem;
+	flex-basis: 50%;
+	align-items: center;
+}
+
+.topComment {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.homeImage {
+	height: auto;
+	width: 100%;
+	aspect-ratio: 4/3;
+	display: block;
+}
+
+.homeVideoFrame {
+	aspect-ratio: 16/9;
+	width: 100%;
+	height: auto;
+	border: none;
+}
+
+@media (max-width: 800px) {
+	.homePageContiner {
+		grid-template-columns: 1fr;
+	}
+
+	.topComment {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.section {
+		max-width: 100%;
+		flex-basis: 100%;
+		justify-content: center;
+	}
+}

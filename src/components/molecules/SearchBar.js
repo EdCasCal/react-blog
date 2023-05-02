@@ -19,7 +19,7 @@ const SearchBar = ({ posts, onSelect }) => {
 	return (
 		<div className={"searchContainer"}>
 			<div className={"searchInput"}>
-				<label htmlFor="search-input" style={{}}>SEARCH THE SITE</label>
+				<label htmlFor="search-input" style={{}}>Search the site</label>
 				<Input id="search-input" type="text" value={searchTerm} placeholder="Enter keyword" onChange={handleSearch} />
 				<ul style={{ display: "none" }}>
 					{filteredPosts.map((post) => (

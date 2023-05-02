@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBar from "../molecules/NavigationBar";
+import NavigationBar from "../molecules/MainMenu";
 import SearchBar from "../molecules/SearchBar";
 
 const posts = [
