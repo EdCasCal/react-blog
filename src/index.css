@@ -1,13 +1,127 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "League Gothic", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 80rem;
+	margin: auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 3.5rem;
+	border-bottom: solid 1px grey;
+	padding: 1rem 2rem;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 2rem;
+}
+
+nav img {
+	height: 3.5rem;
+	align-self: center;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 1rem;
+	margin-bottom: -0.4rem;
+	align-self: flex-end;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: black;
+	font-size: 2rem;
+}
+
+/* SEARCH */
+.searchContainer {
+	display: flex;
+	align-items: flex-end;
+	gap: 0.2rem;
+}
+
+.searchInput {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+header label {
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+header input {
+	padding: 0.5rem;
+	background-color: #130000;
+	font-size: 1rem;
+	border: none;
+	color: white;
+	min-width: 8rem;
+	border-radius: 0;
+}
+
+header input::-webkit-input-placeholder {
+	text-transform: uppercase;
+}
+header input::-moz-placeholder {
+	text-transform: uppercase;
+}
+
+header button {
+	padding: 0.5rem 1rem;
+	border: none;
+	background-color: #d05a00;
+	color: white;
+	font-size: 1rem;
+	text-transform: uppercase;
+	border-radius: 0;
+}
+
+main {
+	margin: 2rem;
+}
+
+h1 {
+	font-size: 2rem;
+	color: #d05a00;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+hr {
+	height: 1rem;
+	border: none;
+}
+
+@media (max-width: 680px) {
+	nav ul {
+		display: none;
+	}
+	main {
+		margin: 0.5rem;
+	}
+
+	main div {
+		flex-direction: column;
+	}
+}
+
+iframe {
+	aspect-ratio: 16/9;
 }
