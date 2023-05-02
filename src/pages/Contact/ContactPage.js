@@ -1,30 +1,32 @@
-import React from 'react';
+import React from "react";
+import styles from "./ContactPage.module.css";
+import Input from "../../components/atoms/Input";
+import Button from "../../components/atoms/Button";
+import TextArea from "../../components/atoms/TextArea";
 
 function ContactPage() {
-  return (
-    <div>
-      <h1>Contact Us</h1>
-      <p>Feel free to reach out to us with any questions or feedback!</p>
-      <form>
-        <label>
-          Name:
-          <input type="text" name="name" />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input type="email" name="email" />
-        </label>
-        <br />
-        <label>
-          Message:
-          <textarea name="message" />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
+	return (
+		<section className={styles.contactContainer}>
+			<h1>Contact Us</h1>
+			<p className={styles.contactSubheader}>Feel free to reach out to us with any questions or feedback!</p>
+			<form className={styles.formContent}>
+				<label className={styles.formLabel}>
+					Name
+					<Input type="text" name="name" placeholder={"John Doe"} className={styles.formInput} />
+				</label>
+				<label className={styles.formLabel}>
+					Email
+					<Input type="email" name="email" placeholder={"lorem@ipsum.com"} className={styles.formInput} />
+				</label>
+				<label className={styles.formLabel}>
+					Message
+					<TextArea name="message" placeholder={"message text"} className={styles.formInput} />
+				</label>
+
+				<Button type="submit">Submit</Button>
+			</form>
+		</section>
+	);
 }
 
 export default ContactPage;

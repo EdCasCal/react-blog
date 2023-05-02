@@ -14,7 +14,7 @@ test("renders home page with blog list and search bar", () => {
 	const heading = screen.getByText("Blog");
 	const searchBar = screen.getByText("Search");
 	const blogList = screen.getByText("Post 1");
-    
+
 	expect(heading).toBeInTheDocument();
 	expect(searchBar).toBeInTheDocument();
 	expect(blogList).toBeInTheDocument();

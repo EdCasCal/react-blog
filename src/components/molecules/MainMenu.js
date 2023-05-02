@@ -1,27 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BlogLogo from "../atoms/BlogLogo";
+import styles from "./MainMenu.module.css";
 
-const NavigationBar = () => {
+const navigarionLinks = [
+	{
+		id: 1,
+		text: "Home",
+		path: "/",
+	},
+	{
+		id: 2,
+		text: "About",
+		path: "/about",
+	},
+	{
+		id: 3,
+		text: "Blog",
+		path: "/blog",
+	},
+	{
+		id: 4,
+		text: "Contact",
+		path: "/contact",
+	},
+];
+
+const MainMenu = () => {
 	return (
 		<nav>
-			<BlogLogo/>
-			<ul>
-				<li>
-					<Link to="/">Home</Link>
-				</li>
-				<li>
-					<Link to="/about">About</Link>
-				</li>
-				<li>
-					<Link to="/blog">Blog</Link>
-				</li>
-				<li>
-					<Link to="/contact">Contact</Link>
-				</li>
+			<BlogLogo />
+			<ul className={styles.mainMenuContainer}>
+				{navigarionLinks.map((link) => (
+					<li key={link.id}>
+						<Link className={styles.menuLink} to={link.path}>
+							{link.text}
+						</Link>
+					</li>
+				))}
 			</ul>
 		</nav>
 	);
 };
 
-export default NavigationBar;
+export default MainMenu;

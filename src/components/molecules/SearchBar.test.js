@@ -10,7 +10,7 @@ const posts = [
 test("renders search bar with posts", () => {
 	const onSelect = jest.fn();
 	render(<SearchBar posts={posts} onSelect={onSelect} />);
-	
+
 	const input = screen.getByPlaceholderText("Search");
 	fireEvent.change(input, { target: { value: "post" } });
 	const post1 = screen.getByText("Post 1");

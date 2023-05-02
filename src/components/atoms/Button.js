@@ -1,7 +1,12 @@
 import React from "react";
+import styles from "./Button.module.css";
 
-const Button = ({ text, onClick }) => {
-	return <button onClick={onClick}>{text}</button>;
+const Button = ({ text, onClick, className }) => {
+	return (
+		<button className={`${styles.buttonBaseStyle} ${className ?? ""}`} onClick={onClick}>
+			{text}
+		</button>
+	);
 };
 
 export default Button;

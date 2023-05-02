@@ -5,7 +5,7 @@ import Button from "./Button";
 test("renders button with text", () => {
 	const onClick = jest.fn();
 	render(<Button text="Button test" onClick={onClick} />);
-	
+
 	const button = screen.getByText("Button test");
 
 	expect(button).toBeInTheDocument();

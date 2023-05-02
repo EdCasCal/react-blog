@@ -5,7 +5,9 @@ const Gallery = () => {
 		<div className={styles.gallery}>
 			<img
 				className={styles.image}
-				src={"https://media.istockphoto.com/id/185313478/photo/cmyk-color-guide-and-lorem-ipsum-text.jpg?s=612x612&w=0&k=20&c=llnNEei8KmQBbZkXJYEOl2wdHMs3d9vly7gp9oN4jJk="}
+				src={
+					"https://media.istockphoto.com/id/185313478/photo/cmyk-color-guide-and-lorem-ipsum-text.jpg?s=612x612&w=0&k=20&c=llnNEei8KmQBbZkXJYEOl2wdHMs3d9vly7gp9oN4jJk="
+				}
 				alt="lorem ipsum gallery 1"
 			/>
 			<img
@@ -35,7 +37,9 @@ const Gallery = () => {
 			/>
 			<img
 				className={styles.image}
-				src={"https://c8.alamy.com/comp/HTWCE7/lorem-ipsum-latin-phrase-made-from-metallic-letterpress-blocks-on-HTWCE7.jpg"}
+				src={
+					"https://c8.alamy.com/comp/HTWCE7/lorem-ipsum-latin-phrase-made-from-metallic-letterpress-blocks-on-HTWCE7.jpg"
+				}
 				alt="lorem ipsum gallery 7"
 			/>
 			<img
@@ -45,11 +49,12 @@ const Gallery = () => {
 			/>
 			<img
 				className={styles.image}
-				src={"https://cdn.dribbble.com/users/1387417/screenshots/4815558/media/7d6dfb359dfecd1e593d4c98ce1d7475.png?compress=1&resize=400x300&vertical=top"}
+				src={
+					"https://cdn.dribbble.com/users/1387417/screenshots/4815558/media/7d6dfb359dfecd1e593d4c98ce1d7475.png?compress=1&resize=400x300&vertical=top"
+				}
 				alt="lorem ipsum gallery 9"
 			/>
-
 		</div>
 	);
 };
- export default Gallery;
+export default Gallery;

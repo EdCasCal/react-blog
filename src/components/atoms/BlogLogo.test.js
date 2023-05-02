@@ -4,7 +4,7 @@ import BlogLogo from "./BlogLogo";
 
 test("renders blog logo", () => {
 	render(<BlogLogo />);
-	
+
 	const logo = screen.getByAltText("Blog Logo");
 
 	expect(logo).toBeInTheDocument();

@@ -3,7 +3,7 @@
 }
 
 .aboutContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
 }
