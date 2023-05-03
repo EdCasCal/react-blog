@@ -1,0 +1,8 @@
+.inputBaseStyle {
+	padding: 0.5rem;
+	background-color: #130000;
+	border: none;
+	color: white;
+	min-width: 8rem;
+	border-radius: 0;
+}

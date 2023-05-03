@@ -1,0 +1,64 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "League Gothic", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 80rem;
+	margin: auto;
+	background: antiquewhite;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 3.5rem;
+	border-bottom: solid 2px #130000;
+	padding: 1rem 2rem;
+}
+
+main {
+	margin: 2rem;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 2rem;
+}
+
+h1 {
+	font-size: 3rem;
+	color: #d05a00;
+}
+
+input::-webkit-input-placeholder {
+	text-transform: uppercase;
+}
+
+input::-moz-placeholder {
+	text-transform: uppercase;
+}
+
+textarea::-webkit-input-placeholder {
+	text-transform: uppercase;
+}
+
+textarea::-moz-placeholder {
+	text-transform: uppercase;
+}
+
+@media (max-width: 50rem) {
+	header {
+		padding: 0.5rem;
+	}
+
+	main {
+		margin: 0.5rem;
+	}
+}

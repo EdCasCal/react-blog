@@ -1,0 +1,53 @@
+.searchContainer {
+	position: relative;
+}
+
+.searchForm {
+	display: flex;
+	align-items: flex-end;
+	gap: 0.2rem;
+}
+
+.searchInput {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	font-size: 1rem;
+}
+
+.searchLabel {
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.searchButton {
+	padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.resultContainer {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: white;
+	width: 100%;
+	z-index: 1;
+	list-style: none;
+	margin-top: 0.2rem;
+}
+
+.resultItem {
+	padding: 0.5rem 0.2rem;
+	padding-left: 0.2rem;
+	width: calc(100% - 0.4rem);
+	text-align: left;
+	cursor: pointer;
+}
+
+.resultItem:hover {
+	background-color: #f2f2f2;
+}
+
+

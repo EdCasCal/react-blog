@@ -1,0 +1,14 @@
+.postsListContainer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+@media (max-width: 50rem) {
+	.postsListContainer {
+		grid-template-columns: 1fr;
+	}
+}
