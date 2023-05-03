@@ -1,0 +1,48 @@
+.formContent {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+}
+
+.formLabel {
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.formInput {
+	font-size: 1.5rem;
+}
+
+.formCancel,
+.formSubmit {
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	max-width: 50%;
+	flex: 1;
+}
+
+.formCancel {
+	background-color: #130000;
+}
+
+.formSubmit {
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	max-width: 50%;
+}
+
+.formActions {
+	display: flex;
+	width: 100%;
+	gap: 1rem;
+}
+
+
+@media (max-width: 50rem) {
+	.contactContainer {
+		max-width: 100%;
+	}
+}

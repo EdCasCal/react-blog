@@ -10,3 +10,9 @@
 .buttonBaseStyle:hover {
 	background-color: #130000;
 }
+
+.buttonBaseStyle:disabled {
+	background-color: #f2f2f2;
+	color: #a0a0a0;
+	cursor: not-allowed;
+}

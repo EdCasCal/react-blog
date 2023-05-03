@@ -5,7 +5,12 @@ export const INITIAL_POSTS = [
 		author: "Lorem Ipsum",
 		date: "2023-01-15",
 		content:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut risus enim, laoreet at risus ut, pellentesque elementum elit. Ut iaculis suscipit pretium. Ut consectetur pretium felis, et luctus massa. Mauris eu convallis nisl, at congue enim. Ut vel aliquam felis. Praesent in rutrum nunc, vitae consectetur diam. Suspendisse rhoncus venenatis justo. Etiam in augue a neque ultrices mollis et ac dui. Cras eleifend ex sem, eu vulputate urna fringilla id. Vivamus vitae consequat purus. Nullam lacinia lacinia hendrerit. Donec sed leo lorem. Vivamus consequat felis libero. In a neque nisi.",
+			`<b>Lorem ipsum dolor sit amet.</b></br>
+			<img src="/blog-logo.svg"/></br>
+			<img src="/blog-logo.svg"/></br>
+			<img src="/blog-logo.svg"/></br>
+			<img src="/blog-logo.svg"/></br>
+			<img src="/blog-logo.svg"/>`,
 	},
 	{
 		id: 2,

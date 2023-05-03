@@ -1,4 +1,5 @@
 import { getStoragePosts, setStoragePosts } from "./storage";
+import { dateFormater } from "./utils";
 
 class LocalStorageApi {
 	constructor(postsService) {
@@ -56,6 +57,7 @@ class LocalStorageApi {
 	}
 }
 
+
 const localStoragePostsApi = new LocalStorageApi({
 	getPost: (id) => {
 		const posts = getStoragePosts();
@@ -71,15 +73,17 @@ const localStoragePostsApi = new LocalStorageApi({
 	createPost: (post) => {
 		const posts = getStoragePosts();
 		post.id = posts.length + 1;
+		post.date = dateFormater(new Date());
 
 		return setStoragePosts([...posts, post]);
 	},
 
 	updatePost: (id, post) => {
+		post.date = dateFormater(new Date());
 		let posts = getStoragePosts();
 		const postIndex = posts.findIndex((post) => parseInt(post.id) === parseInt(id));
-		const updatedPost = { ...posts[postIndex], ...post };
 
+		const updatedPost = { ...posts[postIndex], ...post };
 		return setStoragePosts([...posts.slice(0, postIndex), updatedPost, ...posts.slice(postIndex + 1)]);
 	},
 

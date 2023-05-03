@@ -25,6 +25,11 @@
 	margin-bottom: 1rem;
 }
 
+.postContent {
+	max-height: 15rem;
+	overflow: hidden;
+}
+
 .postFooter {
 	display: flex;
 	justify-content: space-between;

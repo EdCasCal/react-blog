@@ -13,8 +13,13 @@ const PostViewPage = () => {
 	const [post, setPost] = useState(null);
 
 	useEffect(() => {
-		const storagePost = localStoragePostApi.getPost(postId);
-		setPost(storagePost);
+		try {
+			const storagePost = localStoragePostApi.getPost(postId);
+			setPost(storagePost);
+		} catch (e) {
+			console.log(e.message);
+			setPost(null);
+		}
 	}, [postId]);
 
 	const handleEdit = () => {
@@ -24,7 +29,7 @@ const PostViewPage = () => {
 	const handleDelete = () => {
 		localStoragePostApi.deletePost(postId);
 		setPost(null);
-		navigate("/blog");
+		navigate(-1);
 	};
 
 	if (!post) {
@@ -41,16 +46,17 @@ const PostViewPage = () => {
 				<h1>{post.title}</h1>
 				<div className={styles.postActions}>
 					<Button className={styles.postActionButton} text="Edit" onClick={handleEdit} />
-					<Button className={styles.postActionButton} text="Delete" onClick={handleDelete} />
+					<Button className={styles.postActionButton}  text="Delete" onClick={handleDelete} />
 				</div>
 			</div>
+			<div className={styles.postInformation}>
+				<p>By: {post.author}</p>
+				<p>At: {post.date}</p>
+			</div>
 			<div className={styles.postContent}>
-				<p>{post.content}</p>
+				<p dangerouslySetInnerHTML={{__html: post.content}}/>
 			</div>
-			<div className={styles.postFooter}>
-				<p>{post.author}</p>
-				<p>{post.date}</p>
-			</div>
+
 		</section>
 	);
 };

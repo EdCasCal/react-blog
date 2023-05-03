@@ -14,7 +14,7 @@ const Post = ({ post }) => {
 		<div key={post.id} className={styles.postContainer} onClick={handleClick}>
 			<div>
 				<h3 className={styles.postTitle}>{post.title}</h3>
-				<p>{post.content}</p>
+				<p className={styles.postContent} dangerouslySetInnerHTML={{__html: post.content}}/>
 			</div>
 			<div className={styles.postFooter}>
 				<p>{post.author}</p>
