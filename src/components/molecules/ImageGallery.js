@@ -51,9 +51,10 @@ const images = [
 const Gallery = () => {
 	return (
 		<div className={styles.gallery}>
-			{images.map((image) => {
-				return <img key={image.id} className={styles.image} src={image.src} alt={image.alt} />;
-			})}
+			{images &&
+				images.map((image) => {
+					return <img key={image.id} className={styles.image} src={image.src} alt={image.alt} />;
+				})}
 		</div>
 	);
 };

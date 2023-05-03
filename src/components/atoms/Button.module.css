@@ -4,4 +4,9 @@
 	color: white;
 	text-transform: uppercase;
 	border-radius: 0;
+	cursor: pointer;
+}
+
+.buttonBaseStyle:hover {
+	background-color: #130000;
 }

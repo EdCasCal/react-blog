@@ -1,0 +1,13 @@
+.blogHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.addPostButton {
+	padding: 0.5rem 1rem;
+	font-size: 1.5rem;
+	width: 10rem;
+}
