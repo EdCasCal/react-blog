@@ -11,44 +11,76 @@ const search = {
 
 const SearchBar = ({ posts, onSelect }) => {
 	const [searchTerm, setSearchTerm] = useState("");
+	const [searchResults, setSearchResults] = useState([]);
 
 	const handleSearch = (event) => {
-		setSearchTerm(event.target.value);
+		const value = event.target.value;
+		if (value === "") {
+			setSearchTerm("");
+			setSearchResults([]);
+			return;
+		}
+
+		setSearchTerm(value);
+		const results = posts.filter((post) => post.title.toLowerCase().includes(value.toLowerCase()));
+		setSearchResults(results);
+	};
+
+	const handleButtonSearch = () => {
+		if (searchTerm === "") {
+			setSearchTerm("");
+			setSearchResults([]);
+			return;
+		}
+
+		const results = posts.filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()));
+		setSearchResults(results);
+	};
+
+	const handleBlur = () => {
+		setTimeout(() => {
+			setSearchResults([]);
+		}, 200);
 	};
 
 	const handleSelect = (post) => {
-		onSelect(post);
 		setSearchTerm("");
+		setSearchResults([]);
+
+		onSelect(post.id);
 	};
 
-	const filteredPosts = posts.filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()));
-
 	return (
-		<form className={styles.searchContainer}>
-			<div className={styles.searchInput}>
-				<label htmlFor={search.id} className={styles.searchLabel}>
-					Search the site
-				</label>
-				<Input
-					className={styles.searchInput}
-					name={search.id}
-					type="text"
-					value={searchTerm}
-					placeholder={search.placeholder}
-					onChange={handleSearch}
-				/>
+		<div className={styles.searchContainer}>
+			<div className={styles.searchForm}>
+				<div className={styles.searchInput}>
+					<label htmlFor={search.id} className={styles.searchLabel}>
+						Search the site
+					</label>
+					<Input
+						className={styles.searchInput}
+						name={search.id}
+						type="text"
+						value={searchTerm}
+						placeholder={search.placeholder}
+						onChange={handleSearch}
+						onBlur={handleBlur}
+						onFocus={handleSearch}
+					/>
+				</div>
+
+				<Button className={styles.searchButton} text={search.buttonText} onClick={handleButtonSearch} />
 			</div>
-
-			<Button className={styles.searchButton} text={search.buttonText} onClick={handleSearch} />
-
-			<ul className={styles.resultContainer}>
-				{filteredPosts.map((post) => (
-					<li key={post.id} onClick={() => handleSelect(post)}>
-						{post.title}
-					</li>
-				))}
-			</ul>
-		</form>
+			{searchResults && (
+				<ul className={styles.resultContainer}>
+					{searchResults.map((post) => (
+						<li key={post.id} className={styles.resultItem} onClick={() => handleSelect(post)}>
+							{post.title}
+						</li>
+					))}
+				</ul>
+			)}
+		</div>
 	);
 };
 

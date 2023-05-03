@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import localStoragePostsApi from "../../services/api";
+import { useNavigate } from "react-router-dom";
+
 import MainMenu from "../molecules/MainMenu";
 import SearchBar from "../molecules/SearchBar";
 
-const posts = [
-	{ id: 1, title: "Post 1", content: "Content 1", date: "2022-05-01" },
-	{ id: 2, title: "Post 2", content: "Content 2", date: "2022-05-02" },
-];
-
 const Header = () => {
+	const [posts, setPosts] = useState([]);
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		const storagePosts = localStoragePostsApi.getPosts();
+		setPosts(storagePosts);
+	}, []);
+
+	const handleSelect = (postId) => {
+		navigate(`/blog/${postId}`);
+	};
+
 	return (
 		<header>
 			<MainMenu />
-			<SearchBar posts={posts} onSelect={() => {}} />
+			<SearchBar posts={posts} onSelect={handleSelect} />
 		</header>
 	);
 };
