@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TextArea.module.css";
 
-const TextArea = ({ placeholder, onChange, className, value, rows }) => {
+const TextArea = ({ placeholder, onChange, className, value, rows, readOnly }) => {
 	return (
 		<textarea
 			rows={rows ?? 5}
@@ -9,6 +9,7 @@ const TextArea = ({ placeholder, onChange, className, value, rows }) => {
 			placeholder={placeholder}
 			value={value}
 			onChange={onChange}
+			readOnly={readOnly ?? false}
 		/>
 	);
 };
